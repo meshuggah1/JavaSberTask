@@ -6,7 +6,7 @@ public class SquareEquationCalculator {
         double solution;
 
         if (d < 0) {
-            System.out.println("There are no solutions for this one!");
+            System.out.println("There are no solutions in real numbers for this one!");
             System.exit(0);
         }
 
@@ -17,9 +17,9 @@ public class SquareEquationCalculator {
 
         double anotherSolution;
         if (d > 0) {
-            d = Math.sqrt(d);
-            solution = (-b + d) / (2*a);
-            anotherSolution = (-b - d) / (2*a);
+            double sqRootD = Math.sqrt(d);
+            solution = (-b + sqRootD) / (2*a);
+            anotherSolution = (-b - sqRootD) / (2*a);
             System.out.println(solution);
             System.out.println(anotherSolution);
         }

@@ -20,7 +20,7 @@ public class Main {
         SquareEquationCalculator.calculateAndPrint(a, b, c);
     }
 
-    protected static Double tryParse(String m) {
+    private static Double tryParse(String m) {
         double parsedDouble = 0.0;
 
         try {
