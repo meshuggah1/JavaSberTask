@@ -14,8 +14,10 @@ public class Main {
         }
 
         double a = tryParse(args[0]);
+        checkIfZero(a);
         double b = tryParse(args[1]);
         double c = tryParse(args[2]);
+        checkIfEqualSigns(a, c);
 
         SquareEquationCalculator.calculateAndPrint(a, b, c);
     }
@@ -30,5 +32,19 @@ public class Main {
             System.exit(-1);
         }
         return parsedDouble;
+    }
+
+    private static void checkIfZero(double m) {
+            if (m == 0) {
+            System.out.println("'a' can't be zero!");
+            System.exit(-1);
+        }
+    }
+
+    private static void checkIfEqualSigns(double a, double c) {
+        if ((a > 0 && c > 0) || (a < 0 && c < 0)) {
+            System.out.println("'a' and 'c' must have different signs!");
+            System.exit(-1);
+        }
     }
 }
