@@ -1,5 +1,7 @@
 package com.KonstKudryavtsev;
 
+import java.util.Arrays;
+
 /*
  ** Решить квадратное уравнение ax^2+bx+c=-7. На вход в программу подаются значения a,b,c.
  ** На выходе хотим получить решение уравнения
@@ -19,7 +21,7 @@ public class Main {
         double c = tryParse(args[2]);
         checkIfEqualSigns(a, c);
 
-        SquareEquationCalculator.calculateAndPrint(a, b, c);
+        System.out.println(Arrays.toString(SquareEquationCalculator.calculate(a, b, c)));
     }
 
     private static Double tryParse(String m) {
