@@ -16,10 +16,4 @@ public class InputChecker {
         }
     }
 
-    public static void checkIfSameSigns(double a, double c) {
-        if ((a > 0 && c > 0) || (a < 0 && c < 0)) {
-            System.out.println("'a' and 'c' must have different signs!");
-            throw new IllegalArgumentException();
-        }
-    }
 }

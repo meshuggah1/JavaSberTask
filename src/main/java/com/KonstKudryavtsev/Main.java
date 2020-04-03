@@ -16,7 +16,6 @@ public class Main {
         InputChecker.checkIfZero(a);
         double b = InputParser.tryParse(args[1]);
         double c = InputParser.tryParse(args[2]);
-        InputChecker.checkIfSameSigns(a, c);
 
         System.out.println(Arrays.toString(SquareEquationCalculator.calculate(a, b, c)));
     }

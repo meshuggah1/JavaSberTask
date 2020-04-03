@@ -66,30 +66,4 @@ public class TestInputChecker {
         Assert.assertFalse(outputStream.toString().contains("'a' can't be zero!"));
     }
 
-    // случай с a = 0 и c = 0 игнорируем, т.к. он отсеивается на другом чекере
-    @Test
-    public void testSameSignsChecker() {
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream stream = new PrintStream(outputStream);
-        System.setOut(stream);
-
-        double a = 1;
-        double c = 5;
-        try {
-            InputChecker.checkIfSameSigns(a, c);
-        }catch (IllegalArgumentException ignored){}
-
-        Assert.assertTrue(outputStream.toString().contains("'a' and 'c' must have different signs!"));
-
-        outputStream.reset();
-
-        a = -1;
-        c = 23;
-        try {
-            InputChecker.checkIfSameSigns(a, c);
-        }catch (IllegalArgumentException ignored){}
-
-        Assert.assertFalse(outputStream.toString().contains("'a' and 'c' must have different signs!"));
-    }
 }
