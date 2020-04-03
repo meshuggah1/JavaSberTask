@@ -4,7 +4,6 @@ import com.KonstKudryavtsev.SquareEquationCalculator;
 import org.junit.Assert;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.PrintStream;
 
 public class TestSquareEquationCalculator {

@@ -6,7 +6,6 @@ public class SquareEquationCalculator {
 
         if (d < 0) {
             System.out.println("There are no solutions in real numbers for this one!");
-            throw new IllegalArgumentException();
         }
 
         double solution;
