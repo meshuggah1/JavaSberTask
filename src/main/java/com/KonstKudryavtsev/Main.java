@@ -17,10 +17,10 @@ public class Main {
         double b = InputParser.tryParse(args[1]);
         double c = InputParser.tryParse(args[2]);
 
-        System.out.println(Arrays.toString(SquareEquationCalculator.calculate(a, b, c)));
+
+        double []resultArr = (SquareEquationCalculator.calculate(a, b, c));
+        if (resultArr != null) {
+            System.out.println(Arrays.toString(resultArr));
+        }
     }
-
-
-
-
 }

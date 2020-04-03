@@ -11,15 +11,16 @@ public class TestInputParser {
 
     @Test
     public void testDifferentInputStrings() {
-        String []strArr = new String[5];
+        String []strArr = new String[6];
         strArr[0] = "123";
         strArr[1] = "4.4";
         strArr[2] = "0.0";
         strArr[3] = "-0.0";
-        strArr[4] = ".2";
+        strArr[4] = ".2";   // в задании не сказано, считается ли такой ввод корректным, но по дефолту это парсится
+        strArr[5] = "5.f";  // в задании не сказано, считается ли такой ввод корректным, но по дефолту это парсится
 
 
-        double []doubleArr = new double[5];
+        double []doubleArr = new double[6];
 
         for (int i = 0; i < strArr.length; i++) {
             doubleArr[i] = InputParser.tryParse(strArr[i]);
@@ -30,7 +31,7 @@ public class TestInputParser {
         Assert.assertEquals(0.0, doubleArr[2], 0);
         Assert.assertEquals(-0.0, doubleArr[3], 0);
         Assert.assertEquals(0.2, doubleArr[4], 0);
-
+        Assert.assertEquals(5.0, doubleArr[5], 0);
 
     }
 
